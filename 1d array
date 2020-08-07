@@ -1,0 +1,9 @@
+Why we use arrays?
+Ans : B/z to store the varioables required during runtime.Array store homogenous values(of same type) 
+Ex : int[] arr=null;
+     arr=new int[5];//   allocating space in heap. 1 int takes 4 bytes.Contigous memory is allocated. default value for int is 0.
+     arr.length // for size of array
+     
+ Two types of memory:
+ 1 Stack(func calls,variables)
+ 2 Heap(memory allocation at runtime)
