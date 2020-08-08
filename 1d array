@@ -7,3 +7,34 @@ Ex : int[] arr=null;
  Two types of memory:
  1 Stack(func calls,variables)
  2 Heap(memory allocation at runtime)
+
+
+///BUBBLE SORT 
+public class Main {
+    public static void main(String args[]) {
+        int[] arr={88,66,55,44,22};
+        bubble_sort(arr);
+    }
+    public static void bubble_sort(int[] arr){
+        int counter=0;
+        while(counter<arr.length-1){
+            for(int j=0;j<arr.length-1-counter;j++){
+                if(arr[j]>arr[j+1]){
+                    swap(arr,j,j+1);
+                }
+            }
+            counter++;
+        }
+        for(int i=0;i<arr.length;i++){
+            System.out.println(arr[i]);
+        }
+    }
+    public static void swap(int[] arr,int i,int j){
+        int temp=arr[i];
+        arr[i]=arr[j];
+        arr[j]=temp;
+    }
+}
+
+
+
