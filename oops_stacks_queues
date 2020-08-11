@@ -1,3 +1,8 @@
+IN OOPS:
+Noun : Class
+Adjective : Data Member
+Verb : Functions
+
 STACK - LIFO  Insert- O(1)  Delete - O(1) 
 QUEUE - FIFO  Insert- O(1)  Delete - O(1)
 
@@ -9,7 +14,7 @@ Refrence of obj is stored in stack memory.
 Dot operator is used to print the properties.
 
 Acess Specifiers :
-1 Private : Visible inside same class
+1 Private : Visible inside same class.
 2 Public  : Visible Everywhere.
 3 Default : Visible inside same package.
 
@@ -21,4 +26,43 @@ Constructor
   They are of the same name as that of the class.
   Look like function only.
   
+  
+Throws exception 
 
+public void setname(String name) throws Exception{
+  if(name.equals("") || name==null){
+    throw new Exception("This is an exception")
+    } 
+    this.name=name;
+ }
+
+Static and final keyword
+
+static means it belong to the class not to object it means that if its value changes further then it reflects in each and every object.
+static function can only access static data members not access instance variables, this can't be used with static function as well as static variable
+A non-static function can access both static as well as non-static variables
+Acessing static var :  class_name.attribute   
+final means its value set once not change further.(can be public)
+
+Array of objects:
+class_name[] name=new class_name[1000];
+for(int i=0;i<name.length;i++){
+  name[i]=new class_name();
+
+
+Exception Handling
+
+You have to declare both calling and called function as dangerous both.
+Exception canbe handled through try/catch.
+
+Inside try write dangerous function
+try{
+s1.setage(-10);//after statements not executed if error comes
+}
+catch(Exception e){
+syso("In catch");//after statemets are executed
+}
+
+
+
+Stack using arrays:
