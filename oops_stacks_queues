@@ -1,0 +1,24 @@
+STACK - LIFO  Insert- O(1)  Delete - O(1) 
+QUEUE - FIFO  Insert- O(1)  Delete - O(1)
+
+Class is a blueprint, 
+
+class_name obj=new class_name();   //obj is a reference pointing to an object.
+Objects are created in heap memory.
+Refrence of obj is stored in stack memory.
+Dot operator is used to print the properties.
+
+Acess Specifiers :
+1 Private : Visible inside same class
+2 Public  : Visible Everywhere.
+3 Default : Visible inside same package.
+
+this keyword is used in java to acess the current objet attribute.
+
+Constructor 
+  It is used to initialize the instance variables of a particular object.
+  Have no return type not even void.
+  They are of the same name as that of the class.
+  Look like function only.
+  
+
