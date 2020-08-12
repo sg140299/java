@@ -148,9 +148,12 @@ refrence                  instance
 **When u r executing ur program then the entire control is in hands of JVM and jvm will see the right hand side.
 Typecasting of class 
 ((C)obj).param
-Collision of params will be resolved by refrence in both parent and child.
+Collision of params will be resolved by refrence in both parent and child for data members only while for functions its checks that if there is func in child then it
+will run else go to parent.
 Compile type error are better than runtime error
-
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Case 3 is not allowed in java 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Case 4 :Child as refrence as well as instance :
 
 
