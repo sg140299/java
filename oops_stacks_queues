@@ -5,7 +5,7 @@ Verb : Functions
 
 STACK - LIFO  Insert- O(1)  Delete - O(1) 
 QUEUE - FIFO  Insert- O(1)  Delete - O(1)
-
+------------------------------------------------------------------------------------------------------------------------------------------------------
 Class is a blueprint, 
 
 class_name obj=new class_name();   //obj is a reference pointing to an object.
@@ -35,7 +35,8 @@ public void setname(String name) throws Exception{
     } 
     this.name=name;
  }
-
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Static and final keyword
 
 static means it belong to the class not to object it means that if its value changes further then it reflects in each and every object.
@@ -48,8 +49,8 @@ Array of objects:
 class_name[] name=new class_name[1000];
 for(int i=0;i<name.length;i++){
   name[i]=new class_name();
-
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------
 Exception Handling
 
 You have to declare both calling and called function as dangerous both.
@@ -62,7 +63,94 @@ s1.setage(-10);//after statements not executed if error comes
 catch(Exception e){
 syso("In catch");//after statemets are executed
 }
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-
+------------------------------------------------------------------------------------------------------------
 Stack using arrays:
+
+
+public class StackUsingArrays{
+  public int[] data;
+  public int top;
+  public static final int DEFAULT_CAPACITY=10;
+  public StackUsingArrays(){
+    this(DEFAULT_CAPACITY);
+  }
+  public StackUsingArrays(int capacity) throws Exception{
+    if(DEFAULT_CAPACITY<1){
+      throw new Exception("CAPACITY IS INVALID");
+    }
+    this.data=new int[capacity];
+}
+
+
+void push(int value) throws Eaception{         //O(1)
+  if(this.top==array.length){
+    throw new Exception("u get an exception");
+  }
+  this.top++;
+  this.array[this.top]=value;
+}
+
+int pop() throws new Exception{                //O(1)
+if(this.top<0){
+  throws new Exception("ur stack is finished");
+}
+  int v=this.array[this.top];
+  this.array[this.top]=0;
+  this.top--;
+  return v;
+}
+
+
+int top() throws new Exception{                //O(1)
+if(this.top<0){
+  throws new Exception("ur stack is finished");
+}
+  int v=this.array[this.top];
+  return v;
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+==============================================================================
+Practical implementation of stack is refresh and go back to browser.
+==============================================================================
+
+-------------------------
+Inheritance   //all properties and functions of parent are accessible through child also
+
+public class C extends P{
+
+}
+Before main execution blueprint of child and parent came in heap.
+
+4 Types :
+================================
+Refrence  |    Instance
+================================
+Parent    |    Parent
+Parent    |    Child
+Child     |    Parent
+Child     |    Child
+=================================
+P as parent and C as child
+Case 1: Parent as refrence as well as instance
+---------------------------------------------------------------------------------------------------
+P obj           =         new P(); 
+refrence                  instance
+---------------------------------------------------------------------------------------------------
+Case 2 : Parent as refrence and child as instance
+---------------------------------------------------------------------------------------------------
+P obj           =         new C();
+refrence                  instance
+
+**When u r writing the code then the entire hands is in the hands of ur compiler and compiler will see his left hand side 
+**When u r executing ur program then the entire control is in hands of JVM and jvm will see the right hand side.
+Typecasting of class 
+((C)obj).param
+Collision of params will be resolved by refrence in both parent and child.
+Compile type error are better than runtime error
+
+
+
+
