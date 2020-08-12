@@ -155,5 +155,58 @@ Compile type error are better than runtime error
 Case 3 is not allowed in java 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Case 4 :Child as refrence as well as instance :
+During same func name in both parent and child, the child func is called always never parent is called. As func call is by instance. 
+But to access the parent data members typecasting can be used.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+METHOD OVERRIDING
+Method means function ,  Overriding is a feature that allows a child class to provide a specific implementation of a method that is already provided by its parent class
+Abbreviation used is @Override  Func in parent and child have same name, same no of params, same data type of params, same return type of function etc.
+
+METHOD OVERLOADING
+Overloading is a feature such that the name of function is same and the data type of arguments are same then the functions are called as overloaded.
+Oerloading never done on the basis of return type.
+ public static void fun(int... args){   
+    int ans=0;                           
+    for(int val:args){
+        ans+=val;
+    }
+    return ans;
+}
+Variable arguments is called only if it not get corresponding arguents in any fun call.
+Variable arguments of diff type is not allowed i.e.  fun(int... args,double... args) is not allowed in java.
+Vriable arguments is placed in last as a parameter i.e   fun(int... args,String s) is not allowed correct is fun(String s,int... args)  
+Variable arguments is just an array of elements.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DYNAMIC STACK
+Stack is make of the size u passed or 10 size.
+Stack is applicable as an array.
+
+public class DynamicStack extends StackUsingArray{
+    public DynamicStack() throws Exception{
+        this(DEFAULT_CAPACITY);
+    }
+    public DynamicStack(int capacity) throws Exception{
+        super(capacity);
+    }
+    public void push(int item){
+        if(this.size()==this.data.length){
+            int[] arr=new int[2*this.data.length];
+            for(int i=0;i<this.data.length;i++){
+                arr[i]=this.data[i];
+            }
+            this.data=arr;
+         }
+         super.push(item);
+    }
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Reverse a stack
+
+
+
+
+
+
 
 
