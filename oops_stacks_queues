@@ -202,6 +202,21 @@ public class DynamicStack extends StackUsingArray{
 }
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Reverse a stack
+public static void reverseStack(Stackusingarray stack,Stackusingarray helper,int index){
+    if(stack.size()==0){
+        return;
+    }
+    int item=stack.pop();
+    reverseStack(stack,helper,index+1);
+    helper.push(item);
+    if(index==0){
+        while(!helper.isEmpty()){
+            stack.push(helper.pop());
+        }
+   }
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+NEXT GREATER ELEMENT 
 
 
 
