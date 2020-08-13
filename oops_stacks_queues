@@ -216,7 +216,32 @@ public static void reverseStack(Stackusingarray stack,Stackusingarray helper,int
    }
 }
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-NEXT GREATER ELEMENT 
+NEXT GREATER ELEMENT IN ARRAY               T.C. = O(n)*2
+Stack<Integer> s=new Stack<>();
+for(int i=0;i<arr.length;i++){
+    while(!stack.isEmpty() && arr[i]>stack.peek()){
+        int rv=stack.pop();
+    
+        cout<<rv<<"-> "<<arr[i];
+    }
+    stack.push(arr[i]);
+}
+while(!stack.isEmpty()){
+    cout<<stack.pop()<<-1;
+   
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+INTERFACE :
+We can't instanciate an interface.Functions in interface are abstract(only declaration is provided not body) , never do new to interface.
+Interface can never made an constructor.Variable by default in interface is static and final.
+They are implemented by its own class.An interface can extend multiple interfaces.
+In java multiple inheritance is not allowed.But we can achieve ultiple inheritance through interfaces.
+
+
+
+
+
+
 
 
 
