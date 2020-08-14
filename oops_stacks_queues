@@ -235,12 +235,29 @@ INTERFACE :
 We can't instanciate an interface.Functions in interface are abstract(only declaration is provided not body) , never do new to interface.
 Interface can never made an constructor.Variable by default in interface is static and final.
 They are implemented by its own class.An interface can extend multiple interfaces.
-In java multiple inheritance is not allowed.But we can achieve ultiple inheritance through interfaces.
+In java multiple inheritance is not allowed.But we can achieve multiple inheritance through interfaces.
 
 
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+GENERICS :
+When we have diff arguments types in same func name then we use generics type.
+display(int[] arr)
+display(double[] arr) //both are valid
+public static <T> void display(T[] arr){
+    for(T val:arr){
+      cout<<val;
+    }
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+GENERIC BUBBLE SORT
+Every class is derived from object class.
+When u try to print class it will call toString func of object class in whch there is address is printed so to print the data members of class u have to override toString func of class.
 
-
+@Override
+public String toString(){
+  cout<<this.speed<<this.price<<this.color;
+}
 
 
 
